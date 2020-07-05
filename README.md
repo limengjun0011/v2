@@ -1,3 +1,6 @@
+# 加速、一键BBR执行代码
+```wget --no-check-certificate -O tcp.sh https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh && chmod +x tcp.sh && ./tcp.sh```
+
 # 1、执行以下代码
 ```mkdir v2ray-agent && cd v2ray-agent && curl https://raw.githubusercontent.com/limengjun0011/v2/master/install.sh -o install.sh && chmod +x install.sh && ./install.sh```
 
@@ -31,3 +34,7 @@ iptables -I INPUT -s 140.205.225.205/32 -j DROP
 iptables -I INPUT -s 140.205.225.195/32 -j DROP
 iptables -I INPUT -s 140.205.225.204/32 -j DROP
 ```
+
+# 普通的一键v2ray执行脚本（非面板对接使用）
+```bash <(curl -s -L https://git.io/v2ray.sh)```
+
