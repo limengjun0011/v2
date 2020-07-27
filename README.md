@@ -35,7 +35,7 @@ iptables -I INPUT -s 140.205.225.195/32 -j DROP
 iptables -I INPUT -s 140.205.225.204/32 -j DROP
 ```
 
-# 3、如果是腾讯云服务器（卸载阿里云盾）
+# 3、如果是腾讯云服务器（卸载腾讯云监控）
 ``` 
 /usr/local/qcloud/stargate/admin/uninstall.sh
 /usr/local/qcloud/YunJing/uninst.sh
