@@ -35,6 +35,13 @@ iptables -I INPUT -s 140.205.225.195/32 -j DROP
 iptables -I INPUT -s 140.205.225.204/32 -j DROP
 ```
 
+# 3、如果是腾讯云服务器（卸载阿里云盾）
+``` 
+/usr/local/qcloud/stargate/admin/uninstall.sh
+/usr/local/qcloud/YunJing/uninst.sh
+/usr/local/qcloud/monitor/barad/admin/uninstall.sh
+```
+
 # 普通的一键v2ray执行脚本（非面板对接使用）
 ```bash <(curl -s -L https://git.io/v2ray.sh)```
 
