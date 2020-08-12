@@ -5,7 +5,7 @@
 ```mkdir v2ray-agent && cd v2ray-agent && curl https://raw.githubusercontent.com/limengjun0011/v2/master/install.sh -o install.sh && chmod +x install.sh && ./install.sh```
 
 # 2、中转执行以下代码
-```wget -qO natcfg.sh http://arloor.com/sh/iptablesUtils/natcfg.sh && bash natcfg.sh``` 
+```wget https://zhujitips.com/sh/socat.sh && bash socat.sh``` 
 
 # 3、如果是阿里云服务器（卸载阿里云盾）
 ``` 
