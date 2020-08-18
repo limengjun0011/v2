@@ -45,3 +45,7 @@ iptables -I INPUT -s 140.205.225.204/32 -j DROP
 # 普通的一键v2ray执行脚本（非面板对接使用）
 ```bash <(curl -s -L https://git.io/v2ray.sh)```
 
+# 三网测速
+```bash <(curl -Lso- https://git.io/superspeed)```
+
+
