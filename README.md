@@ -49,3 +49,12 @@ iptables -I INPUT -s 140.205.225.204/32 -j DROP
 ```bash <(curl -Lso- https://git.io/superspeed)```
 
 
+
+
+# 手动安装ss
+```wget –no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh```
+```chmod +x shadowsocks.sh```
+```./shadowsocks.sh 2>&1 | tee shadowsocks.log```
+
+
+
