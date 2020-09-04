@@ -52,11 +52,13 @@ iptables -I INPUT -s 140.205.225.204/32 -j DROP
 
 
 # 手动安装ss
-```
-wget –no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
-chmod +x shadowsocks.sh
-./shadowsocks.sh 2>&1 | tee shadowsocks.log
-```
+## 第一步
+```wget –no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh```
+## 第二步
+```chmod +x shadowsocks.sh```
+## 第三步
+```./shadowsocks.sh 2>&1 | tee shadowsocks.log```
+
 
 
 
