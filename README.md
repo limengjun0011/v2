@@ -43,7 +43,7 @@ iptables -I INPUT -s 140.205.225.204/32 -j DROP
 ```
 
 # 普通的一键v2ray执行脚本（非面板对接使用）
-```bash <(curl -s -L https://git.io/v2ray.sh)```
+```wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh```
 
 # 三网测速
 ```bash <(curl -Lso- https://git.io/superspeed)```
