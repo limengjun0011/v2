@@ -49,7 +49,8 @@ iptables -I INPUT -s 140.205.225.204/32 -j DROP
 ```bash <(curl -Lso- https://git.io/superspeed)```
 
 
-
+# 一键ssr脚本
+```wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ss-go.sh && chmod +x ss-go.sh && bash ss-go.sh```
 
 # 手动安装ss
 ## 第一步
