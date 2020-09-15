@@ -544,6 +544,8 @@ iptables -I INPUT -s 140.205.225.204/32 -j DROP
 ```wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh```
 # 三网测速
 ```bash <(curl -Lso- https://git.io/superspeed)```
+# 一键ssr脚本
+```wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ss-go.sh && chmod +x ss-go.sh && bash ss-go.sh```
 # 手动安装ss
 ## 第一步
 ```wget –no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh```
