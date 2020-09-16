@@ -505,6 +505,15 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v
 
 # 加速、一键BBR执行代码
 ```wget --no-check-certificate -O tcp.sh https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh && chmod +x tcp.sh && ./tcp.sh```
+# debian安装防火墙
+```apt install ufw
+   ufw allow 22
+   ufw allow 2222
+   ufw allow 443
+   ufw enable
+   ufw status verbose
+   ```
+
 # 1、执行以下代码（对接sspanel）
 ```mkdir v2ray-agent && cd v2ray-agent && curl https://raw.githubusercontent.com/limengjun0011/v2/master/install.sh -o install.sh && chmod +x install.sh && ./install.sh```
 # 2、中转执行以下代码
