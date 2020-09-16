@@ -506,7 +506,8 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v
 # 加速、一键BBR执行代码
 ```wget --no-check-certificate -O tcp.sh https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh && chmod +x tcp.sh && ./tcp.sh```
 # debian安装防火墙
-```apt install ufw
+```
+   apt install ufw
    ufw allow 22
    ufw allow 2222
    ufw allow 443
