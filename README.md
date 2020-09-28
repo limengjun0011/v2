@@ -518,7 +518,32 @@ ufw status verbose
 # 1、执行以下代码（对接sspanel）
 ```mkdir v2ray-agent && cd v2ray-agent && curl https://raw.githubusercontent.com/limengjun0011/v2/master/install.sh -o install.sh && chmod +x install.sh && ./install.sh```
 # 2、中转执行以下代码
-```wget https://raw.githubusercontent.com/limengjun0011/v2/master/socat.sh && bash socat.sh``` 
+（1）切换国外源
+
+```
+cd /etc/yum.repos.d
+``` 
+（2）安装
+```
+wget -O CentOS-Base.repo https://www.halocloud.net/pan/Centos-7.repo
+```
+（3）清除源缓存并且建立元数据
+``` 
+yum clean all
+yum makecache
+``` 
+（4）安装iptables
+``` 
+yum install -y iptables
+yum update iptables
+yum install iptables-services
+``` 
+（5）安装brook中转
+``` 
+wget  -N --no-check-certificate https://zhujiwiki.com/wp-content/uploads/2020/01//brook-pf-mod.sh && chmod +x brook-pf-mod.sh
+#启动
+./brook-pf-mod.sh
+``` 
 # 3、如果是阿里云服务器（卸载阿里云盾）
 ``` 
 wget http://update.aegis.aliyun.com/download/uninstall.sh
@@ -563,4 +588,16 @@ iptables -I INPUT -s 140.205.225.204/32 -j DROP
 ```chmod +x shadowsocks.sh```
 ## 第三步
 ```./shadowsocks.sh 2>&1 | tee shadowsocks.log```
+
+# 4、修改vps的DNS服务器
+debian安装nscd
+```
+apt-get install nscd
+apt-get install sudo
+sudo /etc/init.d/nscd restart
+```
+
+cloudflare：```echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolv.conf```
+google：```echo -e "nameserver 8.8.8.8\nnameserver 8.8.4.4" > /etc/resolv.conf```
+
 
