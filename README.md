@@ -600,4 +600,16 @@ sudo /etc/init.d/nscd restart
 cloudflare：```echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolv.conf```
 google：```echo -e "nameserver 8.8.8.8\nnameserver 8.8.4.4" > /etc/resolv.conf```
 
+# 5、寻找合适的中转机
+## 1、落地机安装
+```
+apt install iperf3 -y
+iperf3 -s
+```
+## 2、中转机安装
+```
+yum install iperf3 -y
+ iperf3 -c ip //把ip换成落地机的ip
+```
+
 
