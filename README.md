@@ -609,7 +609,7 @@ iperf3 -s
 ## 2、中转机安装
 ```
 yum install iperf3 -y
- iperf3 -c ip //把ip换成落地机的ip
+iperf3 -c ip //把ip换成落地机的ip
 ```
 
 
