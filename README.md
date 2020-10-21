@@ -565,6 +565,8 @@ bash install.sh --uninstall
 - service sockd adduser
 - service sockd deluser
 
+## 2.1.1、火狐浏览器中安装插件
+- 菜单-附件组件-FoxyProxy-安装
 
 # 3、如果是阿里云服务器（卸载阿里云盾）
 ``` 
