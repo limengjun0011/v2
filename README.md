@@ -551,10 +551,11 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v
 
 # 2.1、安装Socks5代理脚本
 
-``` wget --no-check-certificate https://raw.github.com/Lozy/danted/master/install.sh -O install.sh``` 
-``` bash install.sh  --port=9999 --user=shasha --passwd=13610414``` 
+``` 
+wget --no-check-certificate https://raw.github.com/Lozy/danted/master/install.sh -O install.sh
 
-
+bash install.sh  --port=9999 --user=shasha --passwd=13610414
+``` 
 ## 2.1.1、socks的部分命令
 - 卸载
 ``` 
