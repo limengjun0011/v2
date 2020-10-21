@@ -549,6 +549,22 @@ wget  -N --no-check-certificate https://zhujiwiki.com/wp-content/uploads/2020/01
 wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v2/master/natcfg.sh && chmod +x natcfg.sh && bash natcfg.sh
 ``` 
 
+# 2.1、安装Socks5代理脚本
+
+``` wget --no-check-certificate https://raw.github.com/Lozy/danted/master/install.sh -O install.sh``` 
+``` bash install.sh  --port=9999 --user=shasha --passwd=13610414``` 
+
+
+## 2.1.1、socks的部分命令
+- 卸载
+``` 
+bash install.sh --uninstall
+``` 
+
+- service sockd adduser
+- service sockd deluser
+
+
 # 3、如果是阿里云服务器（卸载阿里云盾）
 ``` 
 wget http://update.aegis.aliyun.com/download/uninstall.sh
