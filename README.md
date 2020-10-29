@@ -549,6 +549,11 @@ wget  -N --no-check-certificate https://zhujiwiki.com/wp-content/uploads/2020/01
 wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v2/master/natcfg.sh && chmod +x natcfg.sh && bash natcfg.sh
 ``` 
 
+# 2.0、中转备份文件
+``` 
+vi /etc/dnat/conf
+``` 
+
 # 2.1、安装Socks5代理脚本
 
 ``` 
