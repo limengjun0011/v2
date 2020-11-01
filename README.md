@@ -641,4 +641,11 @@ yum install iperf3 -y
 iperf3 -c ip //把ip换成落地机的ip
 ```
 
+# open VZ系统加速
+```
+wget --no-check-certificate https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
+chmod +x ./kcptun.sh
+./kcptun.sh
+```
+鸣谢：https://ssr.tools/588
 
