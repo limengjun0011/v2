@@ -609,7 +609,7 @@ iptables -I INPUT -s 140.205.225.204/32 -j DROP
 # 三网测速
 ```bash <(curl -Lso- https://git.io/superspeed)```
 # 一键ssr脚本
-```wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ss-go.sh && chmod +x ss-go.sh && bash ss-go.sh```
+```wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh```
 # 手动安装ss
 ## 第一步
 ```wget –no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh```
