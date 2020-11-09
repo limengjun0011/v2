@@ -641,13 +641,11 @@ yum install iperf3 -y
 iperf3 -c ip //把ip换成落地机的ip
 ```
 
-# open VZ系统加速
+# 手动安装v2ray
 ```
-wget --no-check-certificate https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
-chmod +x ./kcptun.sh
-./kcptun.sh
+curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
+bash install-release.sh
 ```
-鸣谢：https://ssr.tools/588
 
 # open VZ BBR加速
 已测试通过的系统： Ubuntu 14.04 x64、Ubuntu 16.04 x64、CentOS 6 x64、CentOS 7 x64 只支持 64 位系统，要求 glibc 版本 2.14 以上。（这里采用centos7）
