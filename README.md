@@ -645,6 +645,8 @@ iperf3 -c ip //把ip换成落地机的ip
 ```
 curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
 bash install-release.sh
+mv config.json /usr/local/etc/v2ray
+systemctl start v2ray
 ```
 
 # open VZ BBR加速
