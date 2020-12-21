@@ -660,3 +660,27 @@ wget https://raw.githubusercontent.com/kuoruan/shell-scripts/master/ovz-bbr/ovz-
 chmod +x ovz-bbr-installer.sh
 ./ovz-bbr-installer.sh
 ```
+
+
+# DDNS
+https://www.dynu.com/zh-CN/
+```
+##Debian/Ubuntu
+apt-get update
+apt-get install curl -y
+
+##CentOS
+yum update -y
+yum install curl -y
+
+
+curl "https://api.dynu.com/nic/update?hostname=您申請的域名&password=您Dynu帳戶的密碼"
+
+## 返回下面信息表示成功 ##
+good xxx.xxx.xxx.xxx (IP地址)
+
+crontab -e
+
+*/1 * * * * curl "https://api.dynu.com/nic/update?hostname=您申請的域名&password=您Dynu帳戶的密碼"> /dev/null 2>&1
+```
+
