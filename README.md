@@ -684,3 +684,51 @@ crontab -e
 */1 * * * * curl "https://api.dynu.com/nic/update?hostname=您申請的域名&password=您Dynu帳戶的密碼"> /dev/null 2>&1
 ```
 
+# 阿里DDNS
+https://blog.csdn.net/y1534414425/article/details/90699532
+```
+##For CentOS：
+yum install -y wget curl cronie
+
+##For Debian 8+：
+apt install -y wget curl cron
+
+##For Ubuntu/Debian 7：
+apt-get install -y wget curl cron
+
+##For 然后下载AliDDNS脚本到你的服务器上：
+wget -O /usr/sbin/AliDDNS-v2.0.sh [版本对应的下载地址]
+
+##下载地址：
+测试版本：https://bitbucket.org/ilemonrain/aliddns/downloads/AliDDNS-v2.0-Beta20180705.sh
+最新版本：https://bitbucket.org/ilemonrain/aliddns/downloads/AliDDNS-v2.0.sh
+稳定版本：https://bitbucket.org/ilemonrain/aliddns/downloads/AliDDNS-v2.0.sh
+
+## 为脚本文件加上可执行属性： ##
+chmod +x /usr/sbin/AliDDNS-v2.0.sh
+
+## 执行脚本，开始配置：
+/usr/sbin/AliDDNS-v2.0.sh
+
+## 首先，在命令行执行命令：
+crontab -e
+## 选择完成后，会打开一个文本编辑器，请在文件的最后添加如下一行：
+*/5 * * * * /usr/sbin/AliDDNS-v2.0.sh run >/dev/null 2>&1 &
+
+## 添加完成后，保存退出。当提示 crontab: installing new crontab 时，表示crontab写入成功，执行命令重启cron进程：
+
+## For CentOS：
+service crond restart
+
+## For Ubuntu/Debian：
+service cron restart
+
+## 并将Cron加入开机启动项：
+
+## For CentOS：
+chkconfig crond on
+
+## For Ubuntu/Debian：
+systemctl enable cron
+```
+
