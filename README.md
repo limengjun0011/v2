@@ -648,6 +648,7 @@ bash install-release.sh
 curl -O https://raw.githubusercontent.com/limengjun0011/v2/master/config.json
 mv config.json /usr/local/etc/v2ray
 systemctl start v2ray
+sudo systemctl enable v2ray
 ```
 
 # open VZ BBR加速
