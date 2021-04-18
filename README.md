@@ -732,4 +732,8 @@ chkconfig crond on
 ## For Ubuntu/Debian：
 systemctl enable cron
 ```
+# 一键v2脚本
 
+```
+bash <(curl -s -L https://git.io/v2ray.sh)
+```
