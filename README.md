@@ -737,3 +737,9 @@ systemctl enable cron
 ```
 bash <(curl -s -L https://git.io/v2ray.sh)
 ```
+
+# V2面板重启
+
+```
+cd /root/v2ray-agent && docker-compose restart v2ray
+```
