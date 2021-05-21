@@ -743,3 +743,25 @@ bash <(curl -s -L https://git.io/v2ray.sh)
 ```
 cd /root/v2ray-agent && docker-compose restart v2ray
 ```
+
+# 原版测速脚本
+
+```
+wget -O ookla-speedtest.tgz 'https://bintray.com/ookla/download/download_file?file_path=ookla-speedtest-1.0.0-x86_64-linux.tgz' && gunzip ookla-speedtest.tgz && tar xvf ookla-speedtest.tar && ./speedtest
+```
+
+# ssh修改root登陆权限
+
+```
+sudo -i
+vi /etc/ssh/sshd_config
+passwd root
+/etc/init.d/ssh restart
+```
+# 流量监控
+
+```
+yum install -y iptraf
+```
+
+
