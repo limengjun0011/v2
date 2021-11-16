@@ -513,6 +513,7 @@ ufw allow 2222
 ufw allow 443
 ufw enable
 ufw status verbose
+ufw disable
    ```
 
 # 1、执行以下代码（对接sspanel）
@@ -763,5 +764,12 @@ passwd root
 ```
 yum install -y iptraf
 ```
+# 自动校准时间
+```
+crontab -e
+```
 
+```
+00 12 * * * /sbin/ntpdate -u ntp.api.bz
+```
 
