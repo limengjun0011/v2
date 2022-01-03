@@ -650,6 +650,14 @@ curl -O https://raw.githubusercontent.com/limengjun0011/v2/master/config.json
 mv config.json /usr/local/etc/v2ray
 systemctl start v2ray
 sudo systemctl enable v2ray
+cd /etc/systemd/system/v2ray.service.d
+
+cat >> ./10-donot_touch_single_conf.conf <<EOF
+Environment="V2RAY_VMESS_AEAD_FORCED=false"
+EOF
+
+systemctl daemon-reload
+systemctl restart v2ray
 ```
 
 # open VZ BBR加速
