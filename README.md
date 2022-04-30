@@ -781,3 +781,9 @@ crontab -e
 00 12 * * * /sbin/ntpdate -u ntp.api.bz
 ```
 
+# Gost中转
+
+```
+wget --no-check-certificate -O gost.sh https://raw.githubusercontent.com/KANIKIG/Multi-EasyGost/master/gost.sh && chmod +x gost.sh && ./gost.sh
+```
+
