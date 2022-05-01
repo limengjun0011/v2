@@ -790,10 +790,6 @@ wget -N https://raw.githubusercontents.com/Misaka-blog/XrayR-script/master/insta
 ```
 vi /etc/systemd/system/XrayR.service
 ```
-# 修改DM5校验
-```
-vi /etc/systemd/system/XrayR.service
-```
 # 替换为以下内容
 ```
 ExecStart=/usr/bin/env xray.vmess.aead.forced=false /usr/local/XrayR/XrayR -config /etc/XrayR/config.yml
