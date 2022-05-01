@@ -797,7 +797,7 @@ ExecStart=/usr/bin/env xray.vmess.aead.forced=false /usr/local/XrayR/XrayR -conf
 ```
 systemctl daemon-reload
 ```
-# 修改配置文件
+# 修改配置文件（/etc/XrayR）
 ```
 vi /etc/XrayR/config.yml
 ```
@@ -816,7 +816,9 @@ vi /etc/XrayR/custom_inbound.json
 	"path": "/v2ray"
 }
 ```
-
+```
+xrayr start
+```
 # Gost中转
 
 ```
