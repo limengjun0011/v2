@@ -781,6 +781,43 @@ crontab -e
 00 12 * * * /sbin/ntpdate -u ntp.api.bz
 ```
 
+# XrayR安装
+
+```
+wget -N https://raw.githubusercontents.com/Misaka-blog/XrayR-script/master/install.sh && bash install.sh
+```
+# 修改DM5校验
+```
+vi /etc/systemd/system/XrayR.service
+```
+# 修改DM5校验
+```
+vi /etc/systemd/system/XrayR.service
+```
+# 替换为以下内容
+```
+ExecStart=/usr/bin/env xray.vmess.aead.forced=false /usr/local/XrayR/XrayR -config /etc/XrayR/config.yml
+```
+# 修改配置文件
+```
+vi /etc/XrayR/config.yml
+```
+# 修改配置文件
+```
+vi /etc/XrayR/custom_inbound.json
+```
+```
+{
+	"offset_port_node": 10550,
+	"server_sub": "159.223.44.181",
+	"host": "159.223.44.181",
+	"alter_id": 0,
+	"network": "ws",
+	"security": "none",
+	"path": "/v2ray"
+}
+```
+
 # Gost中转
 
 ```
