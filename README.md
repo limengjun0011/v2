@@ -794,6 +794,9 @@ vi /etc/systemd/system/XrayR.service
 ```
 ExecStart=/usr/bin/env xray.vmess.aead.forced=false /usr/local/XrayR/XrayR -config /etc/XrayR/config.yml
 ```
+```
+systemctl daemon-reload
+```
 # 修改配置文件
 ```
 vi /etc/XrayR/config.yml
