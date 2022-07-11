@@ -784,7 +784,7 @@ crontab -e
 # XrayR安装
 
 ```
-wget -N https://raw.githubusercontents.com/Misaka-blog/XrayR-script/master/install.sh && bash install.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v2/master/XrayRinstall.sh && chmod +x XrayRinstall.sh && bash XrayRinstall.sh
 ```
 # 修改DM5校验
 ```
