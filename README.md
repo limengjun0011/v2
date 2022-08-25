@@ -326,3 +326,14 @@ wget --no-check-certificate -O gost.sh https://raw.githubusercontent.com/KANIKIG
 bash <(curl -Ls https://raw.githubusercontent.com/limengjun0011/v2/master/install-v2-ui.sh)
 ```
 
+# tiktok脚本
+
+```
+curl -fsL -o ./t.sh.x https://github.com/lmc999/TikTokCheck/raw/main/t.sh.x && chmod +x ./t.sh.x && ./t.sh.x && rm ./t.sh.x
+```
+# 流媒体解锁脚本
+
+```
+bash <(curl -L -s https://git.io/JRw8R) -M 4
+```
+
