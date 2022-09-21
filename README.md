@@ -336,4 +336,50 @@ curl -fsL -o ./t.sh.x https://github.com/lmc999/TikTokCheck/raw/main/t.sh.x && c
 ```
 bash <(curl -L -s https://git.io/JRw8R) -M 4
 ```
+# 屏蔽360，百度定位，国内外银行等。
+
+```
+iptables -A OUTPUT -p tcp -m string --string "dafahao.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "zhengjian.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "zhengjian.org" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "minghui.org" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "dongtaiwang.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "epochtimes.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "epochtimes.org" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "ntdtv.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "ntdtv.org" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "falundafa.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "falundafa.org" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "wujieliulan.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "pbc.gov.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "boc.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "ccb.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "abchina.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "bankcomm.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "cdb.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "adbc.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "cmbchina.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "spdb.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "ecitic.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "hxb.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "cebbank.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "cib.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "cgbchina.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "cmbc.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "cbhb.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "egbank.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "citibank.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "sc.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "hangseng.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "hkbea.com.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "360.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "360.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "so.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "so.cn" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "api.map.baidu.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "ps.map.baidu.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "sv.map.baidu.com" --algo bm --to 65535 -j DROP
+iptables -A OUTPUT -p tcp -m string --string "newvector.map.baidu.com" --algo bm --to 65535 -j DROP
+```
+
 
