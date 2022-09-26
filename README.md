@@ -372,10 +372,6 @@ iptables -A OUTPUT -p tcp -m string --string "citibank.com.cn" --algo bm --to 65
 iptables -A OUTPUT -p tcp -m string --string "sc.com" --algo bm --to 65535 -j DROP
 iptables -A OUTPUT -p tcp -m string --string "hangseng.com" --algo bm --to 65535 -j DROP
 iptables -A OUTPUT -p tcp -m string --string "hkbea.com.cn" --algo bm --to 65535 -j DROP
-iptables -A OUTPUT -p tcp -m string --string "360.com" --algo bm --to 65535 -j DROP
-iptables -A OUTPUT -p tcp -m string --string "360.cn" --algo bm --to 65535 -j DROP
-iptables -A OUTPUT -p tcp -m string --string "so.com" --algo bm --to 65535 -j DROP
-iptables -A OUTPUT -p tcp -m string --string "so.cn" --algo bm --to 65535 -j DROP
 iptables -A OUTPUT -p tcp -m string --string "api.map.baidu.com" --algo bm --to 65535 -j DROP
 iptables -A OUTPUT -p tcp -m string --string "ps.map.baidu.com" --algo bm --to 65535 -j DROP
 iptables -A OUTPUT -p tcp -m string --string "sv.map.baidu.com" --algo bm --to 65535 -j DROP
