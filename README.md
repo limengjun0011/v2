@@ -339,6 +339,7 @@ bash <(curl -L -s https://git.io/JRw8R) -M 4
 # 屏蔽360，百度定位，国内外银行等。
 
 ```
+iptables -F
 iptables -A OUTPUT -p tcp -m string --string "dafahao.com" --algo bm --to 65535 -j DROP
 iptables -A OUTPUT -p tcp -m string --string "zhengjian.com" --algo bm --to 65535 -j DROP
 iptables -A OUTPUT -p tcp -m string --string "zhengjian.org" --algo bm --to 65535 -j DROP
