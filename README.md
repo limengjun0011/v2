@@ -157,13 +157,15 @@ systemctl restart v2ray
 
 # open VZ BBR加速
 已测试通过的系统： Ubuntu 14.04 x64、Ubuntu 16.04 x64、CentOS 6 x64、CentOS 7 x64 只支持 64 位系统，要求 glibc 版本 2.14 以上。（这里采用centos7）
-
+#适用于单网卡（单IP）服务器：
 ```
-systemctl disable firewalld
-systemctl stop firewalld
-wget https://raw.githubusercontent.com/kuoruan/shell-scripts/master/ovz-bbr/ovz-bbr-installer.sh
-chmod +x ovz-bbr-installer.sh
-./ovz-bbr-installer.sh
+wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0/tcp_nanqinlang-rinetd-debianorubuntu.sh
+bash tcp_nanqinlang-rinetd-debianorubuntu.sh
+```
+#如果提示only support OpenVZ !，则使用下面这个脚本
+```
+wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0-nocheckvirt/tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt.sh
+bash tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt.sh
 ```
 
 
