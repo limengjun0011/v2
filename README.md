@@ -381,4 +381,25 @@ iptables -A OUTPUT -p tcp -m string --string "sv.map.baidu.com" --algo bm --to 6
 iptables -A OUTPUT -p tcp -m string --string "newvector.map.baidu.com" --algo bm --to 65535 -j DROP
 ```
 
+#一键DD系统
+```
+wget -N --no-check-certificate https://down.vpsaff.net/linux/dd/network-reinstall-os.sh && \
+chmod +x network-reinstall-os.sh && ./network-reinstall-os.sh
+```
+
+
+# 修改ssh端口
+
+```
+wget https://www.moerats.com/usr/down/sshport.sh
+bash sshport.sh
+```
+#CentOS系统
+```
+service sshd restart
+```
+#Debian/Ubuntu系统
+```
+service ssh restart
+```
 
