@@ -381,7 +381,7 @@ iptables -A OUTPUT -p tcp -m string --string "sv.map.baidu.com" --algo bm --to 6
 iptables -A OUTPUT -p tcp -m string --string "newvector.map.baidu.com" --algo bm --to 65535 -j DROP
 ```
 
-#一键DD系统在CentOS 7系统下执行DD一键脚本执行：
+# 一键DD系统在CentOS 7系统下执行DD一键脚本执行：
 ```
 wget -N --no-check-certificate https://down.vpsaff.net/linux/dd/network-reinstall-os.sh && \
 chmod +x network-reinstall-os.sh && ./network-reinstall-os.sh
