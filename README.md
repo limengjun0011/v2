@@ -383,7 +383,7 @@ iptables -A OUTPUT -p tcp -m string --string "newvector.map.baidu.com" --algo bm
 
 # 一键DD系统在CentOS 7系统下执行DD一键脚本执行：
 ```
-wget -N --no-check-certificate https://down.vpsaff.net/linux/dd/network-reinstall-os.sh && \
+wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v2/master/network-reinstall-os.sh && \
 chmod +x network-reinstall-os.sh && ./network-reinstall-os.sh
 ```
 
