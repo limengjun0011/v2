@@ -386,6 +386,10 @@ iptables -A OUTPUT -p tcp -m string --string "newvector.map.baidu.com" --algo bm
 wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v2/master/network-reinstall-os.sh && \
 chmod +x network-reinstall-os.sh && ./network-reinstall-os.sh
 ```
+```
+apt-get install -y xz-utils openssl gawk file wget screen && screen -S os
+wget --no-check-certificate -O NewReinstall.sh https://git.io/newbetags && chmod a+x NewReinstall.sh && bash NewReinstall.sh
+```
 
 
 # 修改ssh端口
