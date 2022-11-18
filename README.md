@@ -412,15 +412,15 @@ git clone https://github.com/magnific0/wondershaper.git && cd wondershaper
 ```
 #示例
 ```
-    wondershaper -a eth0 -d 1024 -u 512
+    ./wondershaper -a eth0 -d 10240 -u 10240
 
-    wondershaper -a eth1 -d 94000 -u 94000  # could be used on a 100Mbps link
+    ./wondershaper -a eth0 -d 94000 -u 94000  # could be used on a 100Mbps link
 
-    wondershaper -a eth1 -u 94000  # only limit upload
+    ./wondershaper -a eth0 -u 94000  # only limit upload
 
-    wondershaper -c -a eth0
+    ./wondershaper -c -a eth0
 
-    wondershaper -p -f foo.conf
+    ./wondershaper -p -f foo.conf
 ```
 
 
