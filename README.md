@@ -302,6 +302,25 @@ vi /etc/XrayR/config.yml
 ```
 vi /etc/XrayR/custom_inbound.json
 ```
+# tcp协议出口
+```
+[
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "149.129.214.35", 
+            "port": 10550
+          }
+        ]
+      }
+    }
+]
+```
+
+
+# ws协议出口
 ```
 {
 	"offset_port_node": 10550,
