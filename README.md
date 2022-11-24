@@ -340,6 +340,14 @@ xrayr start
 ```
 wget --no-check-certificate -O gost.sh https://raw.githubusercontent.com/KANIKIG/Multi-EasyGost/master/gost.sh && chmod +x gost.sh && ./gost.sh
 ```
+# 重启gost
+```
+crontab -e
+```
+```
+3,15 * * * * systemctl restart gost
+```
+
 
 # v2-ui可视化面板
 
