@@ -449,5 +449,11 @@ git clone https://github.com/magnific0/wondershaper.git && cd wondershaper
 
     ./wondershaper -p -f foo.conf
 ```
+Proxifier注册码序列号
 
+L6Z8A-XY2J4-BTZ3P-ZZ7DF-A2Q9C（Portable Edition）#免安装版本
+
+5EZ8G-C3WL5-B56YG-SCXM9-6QZAP（Standard Edition）#安装版本
+
+P427L-9Y552-5433E-8DSR3-58Z68（MAC） #mac版本
 
