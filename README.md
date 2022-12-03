@@ -449,6 +449,8 @@ git clone https://github.com/magnific0/wondershaper.git && cd wondershaper
 
     ./wondershaper -p -f foo.conf
 ```
+Proxifier代理工具。windows的
+
 Proxifier注册码序列号
 
 L6Z8A-XY2J4-BTZ3P-ZZ7DF-A2Q9C（Portable Edition）#免安装版本
@@ -457,3 +459,31 @@ L6Z8A-XY2J4-BTZ3P-ZZ7DF-A2Q9C（Portable Edition）#免安装版本
 
 P427L-9Y552-5433E-8DSR3-58Z68（MAC） #mac版本
 
+
+#自定义v2ray出口
+```
+"outbounds": [
+      		{
+			"protocol": "http",
+			"settings": {
+			       "servers": [
+                    {
+                        "address": "12.198.49.94",
+                        "port": 32222,
+                        "users": [
+                            {
+                                "user": "arun123",
+                                "pass": "AD69145E234446B75F6DDC857DF6B934"
+                            }
+                        ]
+                    }
+                ]
+			}
+		}
+	]
+```
+
+# windows安装v2ray服务端（适用于有公网ip的）。
+```
+https://www.youtube.com/watch?v=tuZVyVmNUZw&t=481s
+```
