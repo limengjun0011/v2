@@ -122,8 +122,23 @@ apt-get install sudo
 sudo /etc/init.d/nscd restart
 ```
 
-cloudflare：```echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolv.conf```
-google：```echo -e "nameserver 8.8.8.8\nnameserver 8.8.4.4" > /etc/resolv.conf```
+## cloudflare：
+```
+echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolv.conf
+```
+## google：
+```
+echo -e "nameserver 8.8.8.8\nnameserver 8.8.4.4" > /etc/resolv.conf
+```
+## Debian：输入以下命令：
+```
+vi /etc/dhcp/dhclient.conf
+```
+，然后在dhclient.conf最后一行添加以下字符：
+```
+prepend domain-name-servers 8.8.8.8, 8.8.4.4;
+``` 
+同样，修改完后，还是保存并退出，重启VPS即可。
 
 # 5、寻找合适的中转机
 ## 1、落地机安装
