@@ -334,6 +334,39 @@ vi /etc/XrayR/custom_inbound.json
 ]
 ```
 
+# UDP协议出口
+```
+[
+    {
+      "protocol": "vmess",
+      "streamSettings": {
+      "network":"kcp",
+      "kcpSettings": {
+        "mtu": 1350,
+        "tti": 20,
+        "uplinkCapacity": 30,
+        "downlinkCapacity": 100,
+        "congestion": false,
+        "readBufferSize": 1,
+        "writeBufferSize": 1,
+        "header": {
+          "type": "none"
+        }
+      }
+    }
+      	},
+      "settings": {
+        "vnext": [
+          {
+            "address": "47.243.122.158", 
+            "port": 10550
+          }
+        ]
+      }
+    }
+]
+```
+
 
 # ws协议出口
 ```
