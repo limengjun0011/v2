@@ -44,6 +44,22 @@ wget  -N --no-check-certificate https://zhujiwiki.com/wp-content/uploads/2020/01
 ``` 
 wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v2/master/natcfg.sh && chmod +x natcfg.sh && bash natcfg.sh
 ``` 
+# 网络中转调优
+``` 
+ulimit -n 65535
+vim /etc/sysctl.conf
+sysctl -p
+vim /etc/security/limits.conf
+
+*               hard    nofile          65535
+*               soft    nofile          65535
+root            hard    nofile          65535
+root            soft    nofile          65535
+
+
+sed -i '/DefaultLimitNOFILE/c DefaultLimitNOFILE=655350' /etc/systemd/*.conf
+systemctl daemon-reexec
+``` 
 
 # 2.0、中转备份文件
 ``` 
