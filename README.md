@@ -306,7 +306,7 @@ crontab -e
 ```
 
 ```
-00 12 * * * /sbin/ntpdate -u ntp.api.bz
+00 12 * * * /sbin/ntpdate -u cn.pool.ntp.org
 ```
 
 # XrayR安装
