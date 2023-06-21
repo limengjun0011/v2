@@ -551,3 +551,39 @@ P427L-9Y552-5433E-8DSR3-58Z68（MAC） #mac版本
 ```
 https://www.youtube.com/watch?v=tuZVyVmNUZw&t=481s
 ```
+
+# linux优化
+ulimit -n
+ulimit -n 65535
+vim /etc/sysctl.conf
+```
+net.core.default_qdisc=fq
+net.ipv4.tcp_congestion_control=bbr
+vm.overcommit_memory = 1
+net.core.somaxconn = 65535
+kernel.pid_max = 65535
+fs.file-max = 65535
+net.ipv4.ip_forward=1
+```
+```
+echo "* soft nproc 65535"  >> /etc/security/limits.d/20-nproc.conf
+echo "* soft nproc 65535"  >> /etc/security/limits.conf
+echo "* hard nproc 65535"  >> /etc/security/limits.conf
+```
+
+vim /etc/security/limits.conf
+```
+*               hard    nofile          65535
+*               soft    nofile          65535
+root            hard    nofile          65535
+root            soft    nofile          65535
+```
+
+sed -i '/DefaultLimitNOFILE/c DefaultLimitNOFILE=65535' /etc/systemd/*.conf
+
+sysctl -p
+
+systemctl daemon-reexec
+
+reboot
+
