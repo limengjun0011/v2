@@ -1,6 +1,6 @@
 # 加速、一键BBR执行代码
 ```wget --no-check-certificate -O tcp.sh https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh && chmod +x tcp.sh && ./tcp.sh```
-# debian安装防火墙
+
 
 # 国内服务器，运行xray，linux64（https://github.com/XTLS/Xray-core/releases）
 ```
@@ -12,7 +12,7 @@ unset http_proxy
 unset https_proxy
 ```
 
-
+# debian安装防火墙
 ```
 apt install ufw
 ufw allow 22
