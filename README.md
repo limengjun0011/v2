@@ -17,6 +17,9 @@ docker --version
 sudo apt-get purge docker-ce docker-ce-cli containerd.d
 ```
 
+# 优化linux（https://blog.csdn.net/yuezhilangniao/article/details/120971379）
+
+
 
 # debian安装防火墙
 ```
