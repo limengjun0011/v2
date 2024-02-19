@@ -11,6 +11,12 @@ export https_proxy="http://127.0.0.1:10809"
 unset http_proxy
 unset https_proxy
 ```
+# 卸载docker
+```
+docker --version
+sudo apt-get purge docker-ce docker-ce-cli containerd.d
+```
+
 
 # debian安装防火墙
 ```
