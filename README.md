@@ -500,6 +500,10 @@ chmod +x network-reinstall-os.sh && ./network-reinstall-os.sh
 apt-get install -y xz-utils openssl gawk file wget screen && screen -S os
 wget --no-check-certificate -O NewReinstall.sh https://git.io/newbetags && chmod a+x NewReinstall.sh && bash NewReinstall.sh
 ```
+```
+wget -N --no-check-certificate https://down.vpsaff.net/linux/dd/network-reinstall-os.sh && \
+chmod +x network-reinstall-os.sh && ./network-reinstall-os.sh
+```
 
 
 # 修改ssh端口
