@@ -504,7 +504,8 @@ wget --no-check-certificate -O NewReinstall.sh https://git.io/newbetags && chmod
 wget -N --no-check-certificate https://down.vpsaff.net/linux/dd/network-reinstall-os.sh && \
 chmod +x network-reinstall-os.sh && ./network-reinstall-os.sh
 ```
-
+一键DD
+用户名：root 密码：IdcOffer.com
 
 # 修改ssh端口
 
