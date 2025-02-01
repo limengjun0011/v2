@@ -110,7 +110,7 @@ install_XrayR() {
         echo -e "跳过版本检测，开始安装 XrayR"
         last_version="v1.0.0"  # 默认版本可根据需要调整
         echo -e "安装版本：${last_version}"
-        wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/limengjun0011/v2/blob/master/XrayR-linux.zip
+        wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://raw.githubusercontent.com/limengjun0011/v2/master/XrayR-linux.zip
         if [[ $? -ne 0 ]]; then
             echo -e "${red}下载 XrayR 失败，请确保你的服务器能够下载 Github 的文件${plain}"
             exit 1
@@ -131,7 +131,7 @@ install_XrayR() {
     chmod +x XrayR
     mkdir /etc/XrayR/ -p
     rm /etc/systemd/system/XrayR.service -f
-    file="https://github.com/limengjun0011/v2/blob/master/XrayR.service"
+    file="https://raw.githubusercontent.com/limengjun0011/v2/master/XrayR.service"
     wget -q -N --no-check-certificate -O /etc/systemd/system/XrayR.service ${file}
     #cp -f XrayR.service /etc/systemd/system/
     systemctl daemon-reload
@@ -172,7 +172,7 @@ install_XrayR() {
     if [[ ! -f /etc/XrayR/rulelist ]]; then
         cp rulelist /etc/XrayR/
     fi
-    curl -o /usr/bin/XrayR -Ls https://github.com/limengjun0011/v2/blob/master/XrayR
+    curl -o /usr/bin/XrayR -Ls https://raw.githubusercontent.com/limengjun0011/v2/master/XrayR
     chmod +x /usr/bin/XrayR
     ln -s /usr/bin/XrayR /usr/bin/xrayr # 小写兼容
     chmod +x /usr/bin/xrayr
