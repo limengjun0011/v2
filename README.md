@@ -1,3 +1,21 @@
+```
+
+ulimit -n 100000
+
+cat >> /etc/sysctl.conf << 'EOF'
+net.core.somaxconn=65535
+net.ipv4.ip_local_port_range=1024 65535
+net.ipv4.tcp_tw_reuse=1
+net.ipv4.tcp_fin_timeout=15
+net.ipv4.tcp_keepalive_time=600
+net.ipv4.tcp_keepalive_intvl=30
+net.ipv4.tcp_keepalive_probes=5
+EOF
+
+sysctl -p
+```
+
+
 # 加速、一键BBR执行代码
 ```wget --no-check-certificate -O tcp.sh https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh && chmod +x tcp.sh && ./tcp.sh```
 
