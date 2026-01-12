@@ -1,19 +1,38 @@
+# gost增加句柄限制
+```
+mkdir -p /etc/systemd/system/gost.service.d
+nano /etc/systemd/system/gost.service.d/limits.conf
+```
+```
+[Service]
+LimitNOFILE=100000
+```
+```
+systemctl daemon-reexec
+systemctl restart gost
+```
+# 验证
+```
+cat /proc/$(pidof gost)/limits | grep "Max open files"
 ```
 
-ulimit -n 100000
 
-cat >> /etc/sysctl.conf << 'EOF'
-net.core.somaxconn=65535
-net.ipv4.ip_local_port_range=1024 65535
-net.ipv4.tcp_tw_reuse=1
-net.ipv4.tcp_fin_timeout=15
-net.ipv4.tcp_keepalive_time=600
-net.ipv4.tcp_keepalive_intvl=30
-net.ipv4.tcp_keepalive_probes=5
-EOF
-
-sysctl -p
+# nginx增加句柄限制
 ```
+mkdir -p /etc/systemd/system/nginx.service.d
+nano /etc/systemd/system/nginx.service.d/limits.conf
+```
+```
+[Service]
+LimitNOFILE=100000
+```
+```
+systemctl daemon-reexec
+systemctl restart nginx
+```
+
+
+
 
 
 # 加速、一键BBR执行代码
