@@ -31,8 +31,10 @@ systemctl daemon-reexec
 systemctl restart nginx
 ```
 
-
-
+# iptables转发
+```
+wget -O iptables-xj.sh https://gitee.com/mu_yuan_shengtai/v2/raw/master/iptables-xj.sh && chmod +x iptables-xj.sh && bash iptables-xj.sh
+```
 
 
 # 加速、一键BBR执行代码
