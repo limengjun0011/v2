@@ -22,20 +22,6 @@ if ! grep -q "fs.file-max" /etc/sysctl.conf; then
 echo "fs.file-max = 1000000" >> /etc/sysctl.conf
 fi
 
-# 4. TCP优化（避免重复写）
-if ! grep -q "somaxconn" /etc/sysctl.conf; then
-cat >> /etc/sysctl.conf <<EOL
-
-net.core.somaxconn = 65535
-net.core.netdev_max_backlog = 65535
-net.ipv4.tcp_max_syn_backlog = 65535
-net.ipv4.ip_local_port_range = 1024 65535
-net.ipv4.tcp_tw_reuse = 1
-net.ipv4.tcp_fin_timeout = 10
-net.ipv4.tcp_max_tw_buckets = 5000000
-EOL
-fi
-
 # 5. 生效内核参数
 sysctl -p
 
