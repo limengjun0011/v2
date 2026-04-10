@@ -1,3 +1,8 @@
+# x-ui增加句柄限制。
+```
+wget -O handle_opt.sh https://raw.githubusercontent.com/limengjun0011/v2/master/handle_opt.sh && chmod +x handle_opt.sh && bash handle_opt.sh
+```
+
 # gost增加句柄限制
 ```
 mkdir -p /etc/systemd/system/gost.service.d
