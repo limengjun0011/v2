@@ -541,8 +541,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/limengjun0011/v
 chmod +x network-reinstall-os.sh && ./network-reinstall-os.sh
 ```
 ```
-apt-get install -y xz-utils openssl gawk file wget screen && screen -S os
-wget --no-check-certificate -O NewReinstall.sh https://git.io/newbetags && chmod a+x NewReinstall.sh && bash NewReinstall.sh
+bash <(curl -Ls https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh) debian 11 --password 13610414.Li
 ```
 ```
 wget -N --no-check-certificate https://down.vpsaff.net/linux/dd/network-reinstall-os.sh && \
