@@ -1,3 +1,14 @@
+# win11 激活。  打开终端管理员
+```
+右击开始图标，打开Windows终端(管理员)，输入以下命令。一步步执行
+
+slmgr -ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+
+slmgr -skms kms.0t.net.cn
+
+slmgr -ato
+```
+
 # x-ui增加句柄限制。
 ```
 wget -O handle_opt.sh https://raw.githubusercontent.com/limengjun0011/v2/master/handle_opt.sh && chmod +x handle_opt.sh && bash handle_opt.sh
