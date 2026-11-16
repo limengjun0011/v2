@@ -1,6 +1,5 @@
 # 端口实时流量统计
 ```
-```
 apt install nload tcpdump tshark -y
 ```
 ```
@@ -11,7 +10,6 @@ nano port_top.py
 ```
 ```
 python3 port_top.py
-```
 ```
 
 
