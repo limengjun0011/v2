@@ -1,3 +1,78 @@
+# 端口实时流量统计
+```
+```
+apt install nload tcpdump tshark -y
+```
+```
+apt install python3-scapy -y
+```
+```
+nano port_top.py
+```
+```
+#!/usr/bin/env python3
+from scapy.all import sniff, IP, TCP, UDP
+from collections import defaultdict, deque
+import time
+import threading
+import os
+
+traffic = defaultdict(int)
+history = deque()
+lock = threading.Lock()
+
+def packet_handler(pkt):
+    if IP not in pkt:
+        return
+
+    if TCP in pkt:
+        port = pkt[TCP].sport
+    elif UDP in pkt:
+        port = pkt[UDP].sport
+    else:
+        return
+
+    size = len(pkt)
+
+    with lock:
+        traffic[port] += size
+
+def show():
+    while True:
+        time.sleep(1)
+        now = time.time()
+
+        with lock:
+            current = dict(traffic)
+            traffic.clear()
+            history.append((now, current))
+
+            while history and now - history[0][0] > 60:
+                history.popleft()
+
+            totals = defaultdict(int)
+            for _, data in history:
+                for port, size in data.items():
+                    totals[port] += size
+
+        os.system('clear')
+        print("=== 最近60秒端口流量 TOP 20 ===")
+        print(f"{'端口':<12}{'流量':<15}{'速度':<15}")
+
+        for port, size in sorted(totals.items(), key=lambda x: x[1], reverse=True)[:20]:
+            print(f"{port:<12}{size/1024/1024:.2f} MB")
+
+threading.Thread(target=show, daemon=True).start()
+
+sniff(prn=packet_handler, store=False)
+```
+```
+python3 port_top.py
+```
+```
+
+
+
 # win11 激活。  打开终端管理员
 ```
 右击开始图标，打开Windows终端(管理员)，输入以下命令。一步步执行
